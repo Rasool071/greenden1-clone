@@ -13,7 +13,7 @@
     <section>
         <nav class="bg-green-200 p-3 flex justify-between items-center shadow-xl sticky top-0 z-10">
             <h1 class="text-2xl">Greenden</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6 md:hidden">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
@@ -32,14 +32,32 @@
             </ul>
         </nav>
     </section>
+    <section id="sidenav"  class="bg-green-100 fixed z-20 top-0 right-0 transition-all duration-1000" style="width: 50%;height: 100vh;right: -50%;">
+    <div class="text-right p-6">
+        <p id="closenav" class="closenav cursor-pointer">X</p>
+    </div>
+         <ul class="flex flex-col items-center gap-10 text-gray-600">
+            <li>
+                <a class="hover:underline hover:text-black" href="">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline  hover:text-black"
+                    href="product.html">Product</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+        </section>
+
 
     <section class="text-center">
         <h1 class="mt-5 p-5 text-3xl font-bold">Our Products</h1>
-        <input class="border border-black w-100 container p-3 m-5" type="text" placeholder="Search for products...">
+        <input id="search" class="border border-black w-100 container p-3 m-5" type="text" placeholder="Search for products...">
     </section>
 
     <section class="p-5 text-center">
-        <div class="grid grid-cols-2 md:grid-cols-4 m-4 gap-3">
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 m-4 gap-3">
             <div>
                 <img src="./Images/lilly pot.jpg" class="inline hover:shadow-xl transform hover:translate-y-2">
                 <p>Lilly plant</p>
@@ -91,6 +109,8 @@
         </p>
         <p class="mt-5">@2021 Greenday.com</p>
     </section>
+
+    <script src="product.js"></script>
 
 
 
